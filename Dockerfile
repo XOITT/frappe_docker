@@ -1,5 +1,5 @@
 # Use official ERPNext worker image
-FROM frappe/erpnext-worker:version-15.8.0
+FROM frappe/erpnext-worker:latest
 
 # Set environment variables (can override in Render dashboard)
 ENV DB_TYPE=mariadb \
