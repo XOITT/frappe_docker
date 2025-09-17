@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./web
+    ports:
+      - "8000:8000"
+    depends_on:
+      - worker
+      - mariadb
+
+  worker:
+    build: ./worker
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.6
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: erpnext
+      MYSQL_USER: erpuser
+      MYSQL_PASSWORD: erppass
+    ports:
+      - "3306:3306"
