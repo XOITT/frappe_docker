@@ -1,4 +1,4 @@
-# Use official ERPNext web + nginx image
+# Use official ERPNext web + Nginx image
 FROM frappe/erpnext-nginx:latest
 
 # Environment variables (can override in Render dashboard)
@@ -14,6 +14,6 @@ ENV DB_TYPE=mariadb \
     FRAPPE_SITE_DOMAIN=erp.xoitt.com
 
 # Expose HTTP port
-EXPOSE 8000
+EXPOSE 80
 
 # CMD is handled by the base image
