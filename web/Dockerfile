@@ -12,6 +12,6 @@ ENV DB_TYPE=mariadb \
     ADMIN_PASSWORD=Admin@123 \
     FRAPPE_SITE_NAME=erp.xoitt.com \
     FRAPPE_SITE_DOMAIN=erp.xoitt.com \
-    BACKEND=http://xoitt-erp-worker:8000
+    BACKEND=https://xoitt-erp-worker.onrender.com
 
 EXPOSE 80
