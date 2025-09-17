@@ -1,6 +1,7 @@
 # Use official ERPNext web + Nginx image
 FROM frappe/erpnext-nginx:latest
-
+# Copy your custom Nginx config
+COPY default.conf /etc/nginx/conf.d/default.conf
 # Environment variables
 ENV DB_TYPE=mariadb \
     DB_HOST=xoitt-mariadb-erp \
